@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#79ff5b",
+              "on-primary-container": "#107100",
+              "tertiary": "#efffe7",
+              "on-tertiary-fixed": "#002203",
+              "on-surface-variant": "#baccb0",
+              "secondary": "#d3fbff",
+              "inverse-primary": "#106e00",
+              "on-background": "#e5e2e1",
+              "surface-container-lowest": "#0e0e0e",
+              "tertiary-container": "#b1eda7",
+              "on-error-container": "#ffdad6",
+              "surface-variant": "#353534",
+              "secondary-fixed-dim": "#00dbe9",
+              "error-container": "#93000a",
+              "surface-dim": "#131313",
+              "outline": "#85967c",
+              "tertiary-fixed-dim": "#9bd592",
+              "surface-container-low": "#1c1b1b",
+              "surface-container-highest": "#353534",
+              "on-primary-fixed": "#022100",
+              "primary-container": "#39ff14",
+              "on-surface": "#e5e2e1",
+              "surface-bright": "#393939",
+              "on-error": "#690005",
+              "inverse-surface": "#e5e2e1",
+              "on-tertiary-container": "#386d35",
+              "on-tertiary-fixed-variant": "#1c511d",
+              "on-primary": "#053900",
+              "secondary-container": "#00eefc",
+              "surface": "#131313",
+              "inverse-on-surface": "#313030",
+              "error": "#ffb4ab",
+              "on-tertiary": "#003907",
+              "surface-tint": "#2ae500",
+              "tertiary-fixed": "#b6f2ac",
+              "on-secondary-fixed-variant": "#004f54",
+              "surface-container": "#201f1f",
+              "outline-variant": "#3c4b35",
+              "primary-fixed-dim": "#2ae500",
+              "on-secondary": "#00363a",
+              "on-primary-fixed-variant": "#095300",
+              "background": "#131313",
+              "primary": "#efffe3",
+              "surface-container-high": "#2a2a2a",
+              "secondary-fixed": "#7df4ff",
+              "on-secondary-fixed": "#002022",
+              "on-secondary-container": "#00686f"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"],
+              "mono": ["JetBrains Mono"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #39FF14;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .crt-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+        .wireframe-grid {
+            background-image: radial-gradient(#3c4b35 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #106e00, #39ff14, #00eefc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glitch-hover:hover {
+            transform: skewX(-10deg) translateY(-1px);
+            text-shadow: 2px 0 #00eefc, -2px 0 #ff00c1;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary">
+<div class="crt-overlay"></div>
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 rounded-none bg-[#000000] bg-opacity-90 backdrop-blur-md border-b border-[#3C4B35]/15 shadow-[0_1px_0_0_rgba(57,255,20,0.1)] flex justify-between items-center px-6 py-4 max-w-full">
+<div class="text-2xl font-black tracking-tighter text-[#39FF14] drop-shadow-[0_0_8px_rgba(57,255,20,0.4)] font-headline">
+            RIA
+        </div>
+<div class="hidden md:flex gap-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1rem] text-[0.6875rem] md:text-sm text-[#39FF14]/60 hover:text-[#39FF14] transition-colors duration-300 hover:skew-x-[-10deg] hover:translate-y-[-1px] transition-all" href="#">Home</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1rem] text-[0.6875rem] md:text-sm text-[#39FF14]/60 hover:text-[#39FF14] transition-colors duration-300 hover:skew-x-[-10deg] hover:translate-y-[-1px] transition-all" href="#">About</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1rem] text-[0.6875rem] md:text-sm text-[#39FF14]/60 hover:text-[#39FF14] transition-colors duration-300 hover:skew-x-[-10deg] hover:translate-y-[-1px] transition-all" href="#">Contact</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1rem] text-[0.6875rem] md:text-sm text-[#39FF14] border-b-2 border-[#39FF14] pb-1 font-bold hover:skew-x-[-10deg] hover:translate-y-[-1px] transition-all" href="#">Portfolio</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary-container">menu</span>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="relative h-screen pt-20 pb-12 px-6 wireframe-grid">
+<!-- Background Decorative Element -->
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<div class="border-[1px] border-primary-container w-[80vw] h-[819px] rotate-45"></div>
+<div class="absolute border-[1px] border-secondary-container w-[70vw] h-[716px] -rotate-12"></div>
+</div>
+<div class="max-w-7xl mx-auto h-full flex flex-col">
+<!-- Header Section -->
+<header class="mb-8 flex justify-between items-end">
+<div class="space-y-1">
+<span class="font-mono text-[0.6875rem] tracking-[0.2rem] text-secondary-container">FILE_SYSTEM // RIA_OS</span>
+<h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter gradient-text font-headline leading-none">
+                        Knowledge Notes
+                    </h1>
+</div>
+<div class="hidden lg:block text-right font-mono text-[0.6875rem] leading-relaxed text-outline">
+                    [SYSTEM_STATE: OPERATIONAL]<br/>
+                    [DATA_NODES: 4,096]<br/>
+                    [ACCESS_LEVEL: ROOT]
+                </div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="flex-grow grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4 pb-16">
+<!-- Main Featured Note -->
+<div class="md:col-span-2 md:row-span-2 border border-primary-container/30 bg-surface-container-lowest p-6 flex flex-col justify-between relative group hover:border-primary-container transition-all">
+<div class="absolute top-0 right-0 p-2 font-mono text-[0.5rem] text-primary-container/40">0x001</div>
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-mono text-[0.6875rem] uppercase tracking-widest text-primary-container">Quantum_Architecture</span>
+</div>
+<p class="text-on-surface/80 text-lg leading-tight font-light italic">
+                            The disintegration of linear data structures in favor of non-Euclidean semantic maps.
+                        </p>
+</div>
+<!-- Abstract Wireframe Visual -->
+<div class="w-full h-32 border-t border-l border-primary-container/10 mt-4 relative overflow-hidden">
+<svg class="absolute inset-0 w-full h-full opacity-30" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,50 Q25,0 50,50 T100,50" fill="none" stroke="#39FF14" stroke-width="0.5"></path>
+<path d="M0,60 Q25,10 50,60 T100,60" fill="none" stroke="#00EEFC" stroke-width="0.5"></path>
+<circle cx="50" cy="50" fill="#39FF14" r="2"></circle>
+</svg>
+</div>
+</div>
+<!-- Secondary Note 1 -->
+<div class="md:col-span-1 border border-outline-variant/30 bg-surface-container-lowest p-4 flex flex-col gap-4 group hover:border-secondary-container transition-all">
+<div class="flex justify-between items-start">
+<span class="font-mono text-[0.625rem] text-secondary-container">NODE_B7</span>
+<span class="material-symbols-outlined text-xs text-outline">open_in_new</span>
+</div>
+<h3 class="font-bold uppercase text-xs tracking-widest">Neural Interface Protocols</h3>
+<div class="flex-grow flex items-center justify-center opacity-20">
+<span class="material-symbols-outlined text-4xl">psychology</span>
+</div>
+</div>
+<!-- Secondary Note 2 -->
+<div class="md:col-span-1 border border-outline-variant/30 bg-surface-container-lowest p-4 flex flex-col justify-between group hover:bg-surface-container-low transition-all">
+<div class="font-mono text-[0.625rem] text-outline">TAGS: [ENCRYPTION, GHOST]</div>
+<h3 class="font-bold uppercase text-xs tracking-widest">Cipher_Symmetry</h3>
+<div class="h-1 bg-outline-variant/20 w-full mt-2">
+<div class="h-full bg-secondary-container w-2/3"></div>
+</div>
+</div>
+<!-- Small Technical Module -->
+<div class="md:col-span-1 border border-outline-variant/30 bg-surface-container-lowest p-4 flex flex-col justify-between">
+<span class="font-mono text-[10px] text-primary-container">UPLOADING... 82%</span>
+<div class="flex flex-wrap gap-1 mt-2">
+<div class="w-2 h-2 bg-primary-container"></div>
+<div class="w-2 h-2 bg-primary-container"></div>
+<div class="w-2 h-2 bg-primary-container/20"></div>
+<div class="w-2 h-2 bg-primary-container/20"></div>
+</div>
+</div>
+<!-- Wider Data Module -->
+<div class="md:col-span-1 border border-outline-variant/30 bg-surface-container-lowest p-4 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-5">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+</div>
+<h3 class="font-bold uppercase text-[10px] tracking-widest mb-2">Matrix_Log</h3>
+<p class="font-mono text-[8px] text-outline leading-none">
+                        10:00:12 ERR_TIMEOUT<br/>
+                        10:00:15 RECONNECTING...<br/>
+                        10:00:18 SYNC_SUCCESS
+                    </p>
+</div>
+<!-- Featured Secondary -->
+<div class="md:col-span-2 border border-primary-container/20 bg-surface-container-lowest p-6 flex gap-6 items-center">
+<div class="w-24 h-24 border border-secondary-container/30 flex items-center justify-center p-2">
+<svg class="w-full h-full opacity-50" viewbox="0 0 40 40">
+<rect fill="none" height="30" stroke="#00EEFC" stroke-dasharray="2 1" width="30" x="5" y="5"></rect>
+<path d="M5,5 L35,35 M35,5 L5,35" stroke="#00EEFC" stroke-width="0.5"></path>
+</svg>
+</div>
+<div class="flex-grow">
+<h3 class="text-xl font-bold uppercase tracking-tight">Void_Theory_v0.2</h3>
+<p class="text-outline text-xs mt-1">Exploration of the "Nothingness" as a valid storage medium for sentient echoes.</p>
+<button class="mt-4 px-4 py-1 border border-primary-container text-[10px] font-mono hover:bg-primary-container hover:text-on-primary transition-all uppercase tracking-widest glitch-hover">Decrypt_File</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full z-50 bg-transparent flex justify-between items-center px-6 py-2">
+<div class="tonal-shift absolute inset-0 bg-gradient-to-t from-[#0E0E0E] to-transparent -z-10 h-full"></div>
+<div class="font-mono text-[10px] uppercase tracking-widest text-[#39FF14]">
+            ©2077 RIA_OS // ALL_RIGHTS_RESERVED
+        </div>
+<div class="flex gap-6">
+<a class="font-mono text-[10px] uppercase tracking-widest text-[#3C4B35] hover:text-[#00EEFC] cursor-terminal transition-all hover:translate-x-1" href="#">TERMINAL</a>
+<a class="font-mono text-[10px] uppercase tracking-widest text-[#3C4B35] hover:text-[#00EEFC] cursor-terminal transition-all hover:translate-x-1" href="#">LOG_OUT</a>
+</div>
+</footer>
+<!-- Decorative Corner Accents -->
+<div class="fixed top-24 left-4 w-1 h-24 bg-primary-container/20"></div>
+<div class="fixed bottom-12 right-4 w-24 h-1 bg-secondary-container/20"></div>
+<div class="fixed top-24 right-4 text-[8px] font-mono text-outline vertical-text rotate-180 opacity-50" style="writing-mode: vertical-rl;">
+        SYSTEM_ID: B-092-ALPHA
+    </div>
+</body></html>

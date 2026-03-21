@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#79ff5b",
+              "on-primary-container": "#107100",
+              "tertiary": "#efffe7",
+              "on-tertiary-fixed": "#002203",
+              "on-surface-variant": "#baccb0",
+              "secondary": "#d3fbff",
+              "inverse-primary": "#106e00",
+              "on-background": "#e5e2e1",
+              "surface-container-lowest": "#0e0e0e",
+              "tertiary-container": "#b1eda7",
+              "on-error-container": "#ffdad6",
+              "surface-variant": "#353534",
+              "secondary-fixed-dim": "#00dbe9",
+              "error-container": "#93000a",
+              "surface-dim": "#131313",
+              "outline": "#85967c",
+              "tertiary-fixed-dim": "#9bd592",
+              "surface-container-low": "#1c1b1b",
+              "surface-container-highest": "#353534",
+              "on-primary-fixed": "#022100",
+              "primary-container": "#39ff14",
+              "on-surface": "#e5e2e1",
+              "surface-bright": "#393939",
+              "on-error": "#690005",
+              "inverse-surface": "#e5e2e1",
+              "on-tertiary-container": "#386d35",
+              "on-tertiary-fixed-variant": "#1c511d",
+              "on-primary": "#053900",
+              "secondary-container": "#00eefc",
+              "surface": "#131313",
+              "inverse-on-surface": "#313030",
+              "error": "#ffb4ab",
+              "on-tertiary": "#003907",
+              "surface-tint": "#2ae500",
+              "tertiary-fixed": "#b6f2ac",
+              "on-secondary-fixed-variant": "#004f54",
+              "surface-container": "#201f1f",
+              "outline-variant": "#3c4b35",
+              "primary-fixed-dim": "#2ae500",
+              "on-secondary": "#00363a",
+              "on-primary-fixed-variant": "#095300",
+              "background": "#131313",
+              "primary": "#efffe3",
+              "surface-container-high": "#2a2a2a",
+              "secondary-fixed": "#7df4ff",
+              "on-secondary-fixed": "#002022",
+              "on-secondary-container": "#00686f"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .scanline-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #1c511d, #39ff14, #00eefc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glitch-hover:hover {
+            transform: translateX(2px);
+            text-shadow: 2px 0 #00eefc, -2px 0 #39ff14;
+        }
+        .wireframe-bg {
+            background-image: linear-gradient(to right, #3c4b35 1px, transparent 1px), linear-gradient(to bottom, #3c4b35 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.05;
+        }
+        .cursor-terminal {
+            cursor: crosshair;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+<div class="scanline-overlay"></div>
+<div class="wireframe-bg fixed inset-0 z-0"></div>
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 rounded-none bg-[#000000] bg-opacity-90 backdrop-blur-md border-b border-[#3C4B35]/15 shadow-[0_1px_0_0_rgba(57,255,20,0.1)] flex justify-between items-center px-6 py-4 max-w-full">
+<div class="text-2xl font-black tracking-tighter text-[#39FF14] drop-shadow-[0_0_8px_rgba(57,255,20,0.4)] font-headline">
+            RIA
+        </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1rem] text-[0.6875rem] md:text-sm text-[#39FF14]/60 hover:text-[#39FF14] transition-colors duration-300 hover:skew-x-[-10deg] hover:translate-y-[-1px] transition-all" href="#">Home</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1rem] text-[0.6875rem] md:text-sm text-[#39FF14] border-b-2 border-[#39FF14] pb-1 font-bold hover:skew-x-[-10deg] hover:translate-y-[-1px] transition-all" href="#">About</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1rem] text-[0.6875rem] md:text-sm text-[#39FF14]/60 hover:text-[#39FF14] transition-colors duration-300 hover:skew-x-[-10deg] hover:translate-y-[-1px] transition-all" href="#">Portfolio</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1rem] text-[0.6875rem] md:text-sm text-[#39FF14]/60 hover:text-[#39FF14] transition-colors duration-300 hover:skew-x-[-10deg] hover:translate-y-[-1px] transition-all" href="#">Contact</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-[#39FF14]">menu</span>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="relative z-10 w-full h-screen flex flex-col justify-center px-6 md:px-24">
+<!-- Background Identity Anchor -->
+<div class="absolute top-32 right-0 opacity-10 select-none pointer-events-none hidden lg:block">
+<h1 class="text-[12rem] font-black leading-none tracking-tighter uppercase text-outline">
+                RIA_01
+            </h1>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<!-- Left Column: Primary Identity -->
+<div class="md:col-span-7 space-y-6">
+<div class="inline-block bg-surface-container-highest px-3 py-1 border-l-4 border-primary-container">
+<span class="text-[10px] font-mono tracking-widest text-primary-container uppercase">System_Status: Operational</span>
+</div>
+<h2 class="text-5xl md:text-8xl font-black font-headline leading-[0.9] tracking-tighter gradient-text uppercase">
+                    Architecting<br/>Digital<br/>Anomalies.
+                </h2>
+<p class="max-w-md text-on-surface-variant text-lg leading-relaxed font-light">
+                    RIA is a multi-disciplinary design unit specializing in <span class="text-primary-container">high-frequency</span> interface structures and cybernetic brand systems. We operate at the intersection of brutalist architecture and technical precision.
+                </p>
+<div class="flex items-center space-x-4 pt-4">
+<button class="bg-primary-container text-on-primary px-8 py-3 font-bold uppercase tracking-widest text-xs glitch-hover transition-all">
+                        Execute_Request
+                    </button>
+<button class="border border-primary-container/50 text-primary-container px-8 py-3 font-bold uppercase tracking-widest text-xs glitch-hover transition-all">
+                        Download_Core.bin
+                    </button>
+</div>
+</div>
+<!-- Right Column: Metadata & Technical Specs -->
+<div class="md:col-span-5 flex flex-col space-y-12">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-[0.6875rem] uppercase tracking-[0.1rem] text-primary-container/50 block">Origin</label>
+<span class="text-sm font-mono text-on-surface">Neo-Tokyo // Sector 7</span>
+</div>
+<div class="space-y-1">
+<label class="text-[0.6875rem] uppercase tracking-[0.1rem] text-primary-container/50 block">Version</label>
+<span class="text-sm font-mono text-on-surface">RIA_OS_v4.2.0</span>
+</div>
+<div class="space-y-1">
+<label class="text-[0.6875rem] uppercase tracking-[0.1rem] text-primary-container/50 block">Focus</label>
+<span class="text-sm font-mono text-on-surface">Neural Interfaces</span>
+</div>
+<div class="space-y-1">
+<label class="text-[0.6875rem] uppercase tracking-[0.1rem] text-primary-container/50 block">Uptime</label>
+<span class="text-sm font-mono text-on-surface">24,892 Cycles</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 border-l-2 border-secondary-container relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2 opacity-20">
+<span class="material-symbols-outlined text-secondary-container text-4xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<h3 class="text-secondary-container font-mono text-xs uppercase tracking-widest mb-4">Core_Capabilities</h3>
+<ul class="space-y-3 font-mono text-[11px] text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-secondary-container"></span>
+                            Generative Grid Systems
+                        </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-secondary-container"></span>
+                            Dark Mode Logic
+                        </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-secondary-container"></span>
+                            Asymmetric Data Visualization
+                        </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-secondary-container"></span>
+                            Kinetic Typography
+                        </li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full z-50 bg-transparent flex justify-between items-center px-6 py-2 tonal-shift bg-gradient-to-t from-[#0E0E0E] to-transparent">
+<div class="font-mono text-[10px] uppercase tracking-widest text-[#39FF14]">
+            ©2077 RIA_OS // ALL_RIGHTS_RESERVED
+        </div>
+<div class="flex space-x-6">
+<a class="font-mono text-[10px] uppercase tracking-widest text-[#3C4B35] hover:text-[#00EEFC] cursor-terminal translate-x-1 transition-all" href="#">TERMINAL</a>
+<a class="font-mono text-[10px] uppercase tracking-widest text-[#3C4B35] hover:text-[#00EEFC] cursor-terminal translate-x-1 transition-all" href="#">LOG_OUT</a>
+</div>
+</footer>
+<!-- Decorative Elements -->
+<div class="fixed top-24 left-6 hidden lg:block">
+<div class="h-32 w-px bg-gradient-to-b from-primary-container to-transparent opacity-40"></div>
+<div class="mt-2 text-[8px] font-mono text-primary-container/40 vertical-rl uppercase tracking-widest">
+            Lat: 35.6895 // Long: 139.6917
+        </div>
+</div>
+<div class="fixed bottom-12 right-6 hidden lg:block text-right">
+<div class="text-[8px] font-mono text-primary-container/40 uppercase tracking-widest mb-2">
+            System_Load: 12%
+        </div>
+<div class="w-32 h-1 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary-container w-1/3"></div>
+</div>
+</div>
+</body></html>
