@@ -5,72 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="求一的个人作品集：AI 产品经理转型、二手手机回收 AI 经营助手、RAG、Agent、Prompt、数据分析与业务流程设计。" />
   <title>求一｜AI Product Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050607;color:#e5e2e1;font-family:'Space Grotesk',Arial,'Microsoft YaHei',sans-serif;overflow-x:hidden}.scan{position:fixed;inset:0;pointer-events:none;z-index:10;background:linear-gradient(to bottom,rgba(18,16,16,0) 50%,rgba(0,0,0,.08) 50%);background-size:100% 4px}.grid-bg{background-image:linear-gradient(rgba(135,206,250,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(135,206,250,.06) 1px,transparent 1px);background-size:48px 48px}header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(0,0,0,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(135,206,250,.16)}.nav{max-width:1200px;margin:auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;color:#87cefa;font-size:22px;letter-spacing:-1px;text-decoration:none;text-shadow:0 0 10px rgba(135,206,250,.35)}nav{display:flex;gap:28px}nav a{color:rgba(135,206,250,.65);text-decoration:none;font-size:13px;letter-spacing:.12em;text-transform:uppercase}nav a:hover{color:#87cefa}.status{font-family:monospace;color:rgba(135,206,250,.45);font-size:11px;letter-spacing:.16em}.hero{min-height:100vh;padding:130px 24px 80px;display:grid;align-items:center}.wrap{max-width:1200px;margin:auto;width:100%}.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:60px;align-items:center}.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(135,206,250,.32);background:rgba(135,206,250,.06);color:#87cefa;padding:9px 14px;font-family:monospace;font-size:11px;letter-spacing:.18em}.dot{width:8px;height:8px;background:#87cefa;border-radius:50%;box-shadow:0 0 14px #87cefa}.hero h1{font-size:clamp(48px,8vw,104px);line-height:.9;margin:28px 0 24px;color:#87cefa;letter-spacing:-.08em;text-shadow:0 0 16px rgba(135,206,250,.25)}.hero p{max-width:720px;font-size:19px;line-height:1.8;color:#baccb0}.hero strong{color:#87cefa}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}.btn{display:inline-block;padding:13px 22px;border:1px solid #87cefa;color:#87cefa;text-decoration:none;font-weight:700;letter-spacing:.12em;font-size:12px;text-transform:uppercase}.btn:hover{background:rgba(135,206,250,.1)}.btn.secondary{border-color:rgba(133,150,124,.5);color:#baccb0}.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card{border:1px solid rgba(135,206,250,.22);background:rgba(14,14,14,.78);padding:22px;min-height:150px;transition:.2s}.card:hover{border-color:rgba(135,206,250,.7);transform:translateY(-2px)}.num{font-family:monospace;font-size:11px;color:rgba(135,206,250,.55)}.label{margin-top:34px;color:#85967c;font-size:11px;letter-spacing:.18em;text-transform:uppercase}.value{font-size:19px;font-weight:800;margin-top:8px;line-height:1.35}section{padding:90px 24px}.section-head{margin-bottom:36px}.eyebrow{font-family:monospace;color:#87cefa;font-size:11px;letter-spacing:.2em}.title{font-size:clamp(38px,6vw,72px);font-weight:900;line-height:.95;margin:12px 0;background:linear-gradient(90deg,#87cefa 0%,#39ff14 55%,#00eefc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.06em}.lead{max-width:760px;color:#baccb0;line-height:1.8;font-size:17px}.about-grid,.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.skill,.project{border:1px solid rgba(60,75,53,.55);background:rgba(14,14,14,.86);padding:26px}.skill h3,.project h3{font-size:24px;margin:14px 0 12px}.skill p,.project p{color:#baccb0;line-height:1.75}.project.main{grid-column:1/-1;border-color:rgba(135,206,250,.45)}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{border:1px solid rgba(135,206,250,.28);background:rgba(135,206,250,.06);color:#87cefa;padding:7px 10px;font-family:monospace;font-size:12px}.contact-list{display:grid;gap:18px}.contact-item{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid rgba(60,75,53,.6);padding:22px 0;text-decoration:none;color:#e5e2e1}.contact-item:hover{border-color:#87cefa;color:#87cefa}.contact-item span:first-child{font-family:monospace;font-size:11px;color:#85967c;letter-spacing:.18em}.contact-item strong{font-size:clamp(24px,4vw,42px)}footer{padding:28px 24px;color:rgba(135,206,250,.45);font-family:monospace;font-size:11px;letter-spacing:.14em;text-align:center;border-top:1px solid rgba(135,206,250,.12)}@media(max-width:900px){nav{display:none}.status{display:none}.hero-grid,.about-grid,.project-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.project.main{grid-column:auto}.hero{padding-top:120px}}
+    :root{
+      --bg:#fbf8f2;
+      --paper:#fffdf8;
+      --ink:#1f2523;
+      --muted:#68736e;
+      --line:#e7dfd2;
+      --green:#244f3b;
+      --sage:#dfe9dd;
+      --mint:#edf5ec;
+      --clay:#d98b5f;
+      --gold:#c8a35d;
+      --shadow:0 24px 80px rgba(43,55,47,.12);
+      --radius:30px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,"Microsoft YaHei",sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 18% 10%,rgba(223,233,221,.9),transparent 30%),radial-gradient(circle at 90% 0%,rgba(217,139,95,.16),transparent 28%),linear-gradient(180deg,rgba(255,255,255,.62),transparent);z-index:-2}
+    body:after{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(36,79,59,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(36,79,59,.035) 1px,transparent 1px);background-size:44px 44px;z-index:-1}
+    a{color:inherit}
+    header{position:sticky;top:0;z-index:50;background:rgba(251,248,242,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(231,223,210,.75)}
+    .nav{max-width:1180px;margin:0 auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;letter-spacing:-.04em;color:var(--green);font-size:22px}
+    .mark{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-family:"Noto Serif SC";font-weight:900;box-shadow:0 10px 24px rgba(36,79,59,.22)}
+    nav{display:flex;align-items:center;gap:26px;color:var(--muted);font-size:14px;font-weight:700}
+    nav a{text-decoration:none}nav a:hover{color:var(--green)}
+    .nav-cta{padding:10px 16px;border:1px solid var(--green);border-radius:999px;color:var(--green);text-decoration:none;font-weight:800;font-size:13px;background:rgba(255,255,255,.48)}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+    .hero{padding:90px 0 60px}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
+    .kicker{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;background:var(--mint);border:1px solid var(--line);border-radius:999px;color:var(--green);font-weight:800;font-size:13px}
+    .spark{width:8px;height:8px;border-radius:99px;background:var(--clay);box-shadow:0 0 0 6px rgba(217,139,95,.13)}
+    h1{font-family:"Noto Serif SC",serif;font-size:clamp(48px,8vw,96px);line-height:.98;letter-spacing:-.07em;margin:22px 0 24px;color:var(--green)}
+    .hero p{font-size:19px;line-height:1.9;color:var(--muted);max-width:720px;margin:0}.hero strong{color:var(--green)}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}.btn{padding:14px 20px;border-radius:999px;text-decoration:none;font-weight:900;display:inline-flex;align-items:center;gap:8px}.btn.primary{background:var(--green);color:#fff;box-shadow:0 16px 36px rgba(36,79,59,.2)}.btn.ghost{background:#fff;border:1px solid var(--line);color:var(--green)}
+    .portrait-card{position:relative;background:linear-gradient(145deg,#fffdf8,#f2eadc);border:1px solid var(--line);border-radius:42px;min-height:560px;padding:28px;box-shadow:var(--shadow);overflow:hidden}
+    .portrait-card:before{content:"";position:absolute;inset:28px;border-radius:32px;background:linear-gradient(180deg,rgba(36,79,59,.08),rgba(217,139,95,.10));border:1px solid rgba(36,79,59,.08)}
+    .orb{position:absolute;border-radius:50%;filter:blur(.2px)}.orb.one{width:180px;height:180px;background:#dfe9dd;right:32px;top:42px}.orb.two{width:120px;height:120px;background:#f0d0bd;left:42px;bottom:92px}.orb.three{width:80px;height:80px;background:#e9d49f;right:82px;bottom:58px}
+    .profile{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:space-between;min-height:500px}.profile h2{font-family:"Noto Serif SC";font-size:42px;color:var(--green);letter-spacing:-.05em;margin:0}.profile small{font-weight:900;color:var(--clay);letter-spacing:.14em}.profile-box{background:rgba(255,253,248,.82);border:1px solid rgba(231,223,210,.9);border-radius:26px;padding:20px;box-shadow:0 20px 50px rgba(43,55,47,.08)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}.stat{background:rgba(255,253,248,.72);border:1px solid var(--line);border-radius:22px;padding:18px}.stat b{font-size:24px;color:var(--green)}.stat span{display:block;color:var(--muted);font-size:13px;margin-top:6px;line-height:1.5}
+    section{padding:74px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:28px}.eyebrow{font-size:13px;font-weight:900;color:var(--clay);letter-spacing:.16em;text-transform:uppercase}.title{font-family:"Noto Serif SC";font-size:clamp(34px,5vw,62px);line-height:1.05;letter-spacing:-.06em;margin:8px 0 0;color:var(--green)}.lead{max-width:680px;color:var(--muted);line-height:1.85;font-size:17px}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}.note{background:var(--green);color:#fff;border-radius:var(--radius);padding:34px;min-height:360px;box-shadow:var(--shadow)}.note h3{font-family:"Noto Serif SC";font-size:34px;line-height:1.15;margin:0 0 18px}.note p{color:rgba(255,255,255,.78);line-height:1.9}.note .quote{margin-top:38px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);font-size:15px;color:rgba(255,255,255,.72)}
+    .skill-list{display:grid;grid-template-columns:1fr 1fr;gap:16px}.skill{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 16px 46px rgba(43,55,47,.06)}.skill .num{font-weight:900;color:var(--gold)}.skill h3{font-size:23px;margin:18px 0 10px}.skill p{color:var(--muted);line-height:1.78;margin:0}
+    .works{display:grid;grid-template-columns:1fr 1fr;gap:18px}.work{background:var(--paper);border:1px solid var(--line);border-radius:34px;padding:28px;box-shadow:0 16px 46px rgba(43,55,47,.06);position:relative;overflow:hidden}.work:before{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:rgba(223,233,221,.7)}.work.main{grid-column:1/-1;display:grid;grid-template-columns:1fr .8fr;gap:18px;background:linear-gradient(135deg,#fffdf8,#edf5ec)}.work h3{position:relative;font-size:28px;margin:8px 0 12px;color:var(--green);letter-spacing:-.04em}.work p{position:relative;color:var(--muted);line-height:1.82}.tags{position:relative;display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.tag{padding:8px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--green);font-size:13px;font-weight:800}.mini-board{position:relative;background:rgba(36,79,59,.95);border-radius:28px;padding:22px;color:#fff;display:grid;gap:12px}.bar{height:12px;border-radius:999px;background:rgba(255,255,255,.16);overflow:hidden}.bar i{display:block;height:100%;border-radius:999px;background:#dfe9dd}.board-row{display:flex;align-items:center;justify-content:space-between;font-size:13px;color:rgba(255,255,255,.75)}
+    .timeline{display:grid;gap:14px}.step{display:grid;grid-template-columns:160px 1fr;gap:18px;background:rgba(255,253,248,.72);border:1px solid var(--line);border-radius:26px;padding:22px}.step time{font-weight:900;color:var(--clay)}.step h3{margin:0 0 8px;font-size:22px;color:var(--green)}.step p{margin:0;color:var(--muted);line-height:1.75}
+    .contact{background:var(--green);border-radius:42px;color:#fff;padding:46px;display:grid;grid-template-columns:1fr .8fr;gap:24px;box-shadow:var(--shadow)}.contact h2{font-family:"Noto Serif SC";font-size:clamp(34px,5vw,64px);line-height:1.05;letter-spacing:-.06em;margin:0}.contact p{color:rgba(255,255,255,.75);line-height:1.85}.contact-links{display:grid;gap:12px}.contact-links a,.contact-links div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:16px;text-decoration:none}.contact-links span{display:block;font-size:12px;color:rgba(255,255,255,.55);font-weight:800;letter-spacing:.12em}.contact-links b{font-size:20px}.footer{padding:34px 22px;text-align:center;color:var(--muted);font-size:13px}
+    @media(max-width:900px){nav{display:none}.nav-cta{display:none}.hero{padding-top:58px}.hero-grid,.about-grid,.work.main,.contact{grid-template-columns:1fr}.portrait-card{min-height:420px}.profile{min-height:360px}.stats,.skill-list,.works{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.step{grid-template-columns:1fr}h1{font-size:54px}}
   </style>
 </head>
-<body class="grid-bg">
-  <div class="scan"></div>
+<body>
   <header>
     <div class="nav">
-      <a class="brand" href="#top">QIUYI.AI</a>
-      <nav><a href="#about">关于我</a><a href="#portfolio">作品集</a><a href="#contact">联系</a></nav>
-      <div class="status">AI_PRODUCT_PM // ONLINE</div>
+      <a class="brand" href="#top"><span class="mark">求</span><span>QIUYI</span></a>
+      <nav><a href="#about">关于我</a><a href="#works">作品集</a><a href="#path">成长路径</a><a href="#contact">联系</a></nav>
+      <a class="nav-cta" href="#works">View Works</a>
     </div>
   </header>
 
   <main id="top" class="hero">
     <div class="wrap hero-grid">
-      <div>
-        <div class="badge"><span class="dot"></span>AI PRODUCT PORTFOLIO</div>
-        <h1>求一<br>AI 产品作品集</h1>
-        <p>我正在从业务执行与数据标注经验，转向 AI 产品经理方向。当前主线项目是 <strong>「二手手机回收 AI 经营助手」</strong>，围绕门店验机、估价、风控、客服问答和经营看板，训练自己把业务问题拆成产品方案、AI 链路和可评测指标。</p>
-        <div class="actions"><a class="btn" href="#portfolio">查看项目作品</a><a class="btn secondary" href="#about">了解能力结构</a></div>
-      </div>
-      <div class="cards">
-        <div class="card"><div class="num">01</div><div class="label">目标岗位</div><div class="value">AI 产品经理 / AI 产品助理</div></div>
-        <div class="card"><div class="num">02</div><div class="label">主线项目</div><div class="value">二手手机回收 AI 经营助手</div></div>
-        <div class="card"><div class="num">03</div><div class="label">能力关键词</div><div class="value">RAG · Agent · Prompt · 数据分析</div></div>
-        <div class="card"><div class="num">04</div><div class="label">业务理解</div><div class="value">收 · 检 · 估 · 售 · 风控</div></div>
-      </div>
+      <section>
+        <div class="kicker"><span class="spark"></span>AI Product Portfolio · Building in Public</div>
+        <h1>把复杂业务，做成清晰可用的 AI 产品。</h1>
+        <p>你好，我是求一。正在从业务执行、客服经验与数据标注实践，转向 <strong>AI 产品经理 / AI 产品助理</strong>。我关注的不是“AI 概念”，而是如何把真实业务里的重复问答、验机标准、报价风控和经营分析，拆成可以落地的产品流程。</p>
+        <div class="actions">
+          <a class="btn primary" href="#works">查看我的项目 →</a>
+          <a class="btn ghost" href="#about">了解我如何思考</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>01</b><span>主线项目<br>二手手机回收 AI 助手</span></div>
+          <div class="stat"><b>04</b><span>业务链路<br>收 · 检 · 估 · 售</span></div>
+          <div class="stat"><b>70%+</b><span>目标指标<br>标准问答自动应答</span></div>
+          <div class="stat"><b>AI PM</b><span>方向定位<br>产品设计 + 评测闭环</span></div>
+        </div>
+      </section>
+
+      <aside class="portrait-card" aria-label="个人定位卡片">
+        <span class="orb one"></span><span class="orb two"></span><span class="orb three"></span>
+        <div class="profile">
+          <div class="profile-box">
+            <small>PERSONAL SYSTEM</small>
+            <h2>求一<br>AI 产品学习者</h2>
+          </div>
+          <div class="profile-box">
+            <small>CURRENT FOCUS</small>
+            <p>RAG 知识问答、Agent 工具调用、Prompt 体系、AI 链路评测、经营数据看板。</p>
+          </div>
+        </div>
+      </aside>
     </div>
   </main>
 
   <section id="about">
     <div class="wrap">
-      <div class="section-head"><div class="eyebrow">Profile_Status: Building</div><h2 class="title">从执行者到 AI 产品设计者</h2><p class="lead">我的优势不是一开始就站在“技术专家”的位置，而是更接近真实业务现场：知道一线员工为什么查资料慢、为什么报价容易不统一、为什么新人培训成本高，也知道 AI 产品不能只写概念，必须落到流程、数据、工具调用和评测指标上。</p></div>
+      <div class="section-head">
+        <div><div class="eyebrow">About Me</div><h2 class="title">我的优势，是从真实场景里长出来的。</h2></div>
+        <p class="lead">我不是只做“好看的页面”，而是训练自己用产品经理视角回答：谁在用？痛点是什么？AI 该介入哪一段？怎样验证效果？失败后怎么复盘？</p>
+      </div>
       <div class="about-grid">
-        <article class="skill"><div class="eyebrow">CAPABILITY_01</div><h3>业务拆解</h3><p>能把回收门店的收货、验机、估价、风控、销售流程拆成角色、场景、痛点和指标。</p></article>
-        <article class="skill"><div class="eyebrow">CAPABILITY_02</div><h3>AI 产品链路</h3><p>理解 RAG、意图识别、工具调用、Prompt 约束、Badcase 反馈和评测闭环。</p></article>
-        <article class="skill"><div class="eyebrow">CAPABILITY_03</div><h3>数据分析基础</h3><p>持续学习 Python、Pandas、SQL，用数据看成交、取消、报价、库存和经营效率。</p></article>
-        <article class="skill"><div class="eyebrow">CAPABILITY_04</div><h3>用户共情</h3><p>来自客服、咖啡、数据标注等经历，习惯观察细节、理解一线执行者的真实阻力。</p></article>
+        <article class="note">
+          <h3>我更适合做“业务型 AI 产品”。</h3>
+          <p>因为我能理解一线执行者的复杂感受：流程混乱、标准不一、查资料慢、重复沟通多、经验难沉淀。我的目标是把这些混乱问题，整理成系统、规则、知识库、工具调用和数据指标。</p>
+          <div class="quote">关键词：用户共情 / 业务拆解 / AI 产品链路 / 数据验证 / 持续迭代</div>
+        </article>
+        <div class="skill-list">
+          <article class="skill"><div class="num">01</div><h3>业务拆解</h3><p>把门店、客服、质检、运营的工作拆成角色、场景、任务、异常和指标。</p></article>
+          <article class="skill"><div class="num">02</div><h3>AI 链路设计</h3><p>理解 RAG、意图识别、槽位收集、路由、Tool Call、Prompt 约束和兜底策略。</p></article>
+          <article class="skill"><div class="num">03</div><h3>数据分析</h3><p>用 Python、Pandas、SQL 训练自己从成交、取消、报价、库存和人效中发现问题。</p></article>
+          <article class="skill"><div class="num">04</div><h3>表达交付</h3><p>能输出 PRD、架构图、流程图、评测表、Prompt 模板和项目复盘。</p></article>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="portfolio">
+  <section id="works">
     <div class="wrap">
-      <div class="section-head"><div class="eyebrow">PROJECT_SYSTEM // AI_PM</div><h2 class="title">作品集</h2><p class="lead">这里不是单纯放“页面效果”，而是展示我如何把一个业务场景拆成产品模块、AI 链路、数据指标和迭代闭环。</p></div>
-      <div class="project-grid">
-        <article class="project main"><div class="eyebrow">MAIN PROJECT</div><h3>二手手机回收 AI 经营助手</h3><p>面向门店、质检、客服、运营的 ToB AI 助手，覆盖收、检、估、售与风控，目标是降低新人培训成本、统一验机报价标准、提升问答与经营决策效率。</p><div class="tags"><span class="tag">RAG 知识问答</span><span class="tag">Tool Call 查价/查单/风控</span><span class="tag">验机报告生成</span><span class="tag">经营数据看板</span></div></article>
-        <article class="project"><div class="eyebrow">RAG PIPELINE</div><h3>多层问答策略与知识库设计</h3><p>设计缓存、QA 知识库、RAG 检索、Rerank、Fusion、受控生成和人工审核入库流程，用于提升高频问题响应速度与答案稳定性。</p><div class="tags"><span class="tag">缓存命中阈值 ≥90%</span><span class="tag">相似问扩展</span><span class="tag">Badcase 回流</span></div></article>
-        <article class="project"><div class="eyebrow">EVALUATION</div><h3>AI 链路评测体系</h3><p>围绕 Query 改写、意图识别、槽位抽取、路由、工具调用、LLM 生成和端到端结果，建立可跑分评测表。</p><div class="tags"><span class="tag">节点级评分</span><span class="tag">端到端可用率</span><span class="tag">Prompt 迭代</span></div></article>
+      <div class="section-head">
+        <div><div class="eyebrow">Selected Works</div><h2 class="title">我正在搭建的项目作品集。</h2></div>
+        <p class="lead">作品集的目标不是堆功能，而是证明：我能把业务痛点拆成产品模块，把 AI 能力拆成可执行链路，把结果拆成可衡量指标。</p>
+      </div>
+      <div class="works">
+        <article class="work main">
+          <div>
+            <div class="eyebrow">Main Project</div>
+            <h3>二手手机回收 AI 经营助手</h3>
+            <p>面向门店、质检、客服、运营的 ToB AI 助手。围绕「收 - 检 - 估 - 售」业务链路，提供智能问答、验机标准查询、报价辅助、风控提醒、经营数据看板和报告生成能力。</p>
+            <div class="tags"><span class="tag">RAG 知识问答</span><span class="tag">Tool Call</span><span class="tag">风控规则</span><span class="tag">经营看板</span></div>
+          </div>
+          <div class="mini-board">
+            <div class="board-row"><span>自动应答目标</span><b>70%+</b></div><div class="bar"><i style="width:72%"></i></div>
+            <div class="board-row"><span>端到端可用率目标</span><b>80%+</b></div><div class="bar"><i style="width:82%"></i></div>
+            <div class="board-row"><span>验机报价提效</span><b>15min → 更低</b></div><div class="bar"><i style="width:66%"></i></div>
+          </div>
+        </article>
+        <article class="work"><div class="eyebrow">RAG Pipeline</div><h3>多层问答策略</h3><p>设计缓存、QA 知识库、混合检索、Rerank、Fusion、受控生成和人工审核入库流程。</p><div class="tags"><span class="tag">缓存命中 ≥90%</span><span class="tag">相似问扩展</span><span class="tag">Badcase 回流</span></div></article>
+        <article class="work"><div class="eyebrow">Evaluation</div><h3>AI 链路评测体系</h3><p>围绕 Query 改写、意图识别、路由、工具调用、LLM 生成和端到端结果建立评测表。</p><div class="tags"><span class="tag">0/0.5/1 评分</span><span class="tag">错误归因</span><span class="tag">Prompt 迭代</span></div></article>
+        <article class="work"><div class="eyebrow">Dashboard</div><h3>经营看板与 ROI</h3><p>用成交量、取消量、报价分布、库存周转、自动应答率和节省工时证明产品价值。</p><div class="tags"><span class="tag">成交趋势</span><span class="tag">价格分布</span><span class="tag">投入产出比</span></div></article>
+        <article class="work"><div class="eyebrow">Prompt System</div><h3>Prompt 体系建设</h3><p>覆盖 Query 改写、意图识别、槽位抽取、任务规划、知识融合、结构化输出等节点。</p><div class="tags"><span class="tag">Few-shot</span><span class="tag">证据→结论→建议</span><span class="tag">兜底约束</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="path">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Growth Path</div><h2 class="title">我现在的成长路径。</h2></div>
+      </div>
+      <div class="timeline">
+        <div class="step"><time>阶段 01</time><div><h3>补齐产品基本功</h3><p>持续训练 PRD、用户场景、功能结构、流程图、竞品分析和需求优先级判断。</p></div></div>
+        <div class="step"><time>阶段 02</time><div><h3>建立 AI 产品方法论</h3><p>围绕 RAG、Agent、Prompt、工具调用、评测体系和 Badcase 反馈，形成可复用项目框架。</p></div></div>
+        <div class="step"><time>阶段 03</time><div><h3>完成可展示作品集</h3><p>把二手手机回收 AI 经营助手做成可讲、可看、可复盘的完整项目，用于面试和长期积累。</p></div></div>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <div class="wrap">
-      <div class="section-head"><div class="eyebrow">Status: Open To Opportunity</div><h2 class="title">建立连接</h2><p class="lead">欢迎围绕 AI 产品、RAG/Agent 项目、二手回收业务、作品集优化与岗位机会交流。</p></div>
-      <div class="contact-list">
-        <a class="contact-item" href="https://github.com/1805069919-cmd" target="_blank"><span>01 // GitHub</span><strong>1805069919-cmd</strong></a>
-        <div class="contact-item"><span>02 // 项目方向</span><strong>AI 产品经理 / AI 产品助理</strong></div>
-        <div class="contact-item"><span>03 // 当前主题</span><strong>二手手机回收 AI 经营助手</strong></div>
+      <div class="contact">
+        <div><div class="eyebrow" style="color:#dfe9dd">Contact</div><h2>欢迎和我聊聊 AI 产品、作品集与岗位机会。</h2><p>我正在寻找能把业务理解、产品设计和 AI 能力结合起来的机会，也欢迎围绕二手回收、RAG/Agent、Prompt 体系和数据看板交流。</p></div>
+        <div class="contact-links">
+          <a href="https://github.com/1805069919-cmd" target="_blank" rel="noreferrer"><span>GitHub</span><b>1805069919-cmd</b></a>
+          <div><span>方向</span><b>AI 产品经理 / AI 产品助理</b></div>
+          <div><span>主线项目</span><b>二手手机回收 AI 经营助手</b></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer>©2026 QIUYI // AI PRODUCT PORTFOLIO // RAG_AGENT_PROMPT</footer>
+  <footer class="footer">© 2026 求一 QIUYI · AI Product Portfolio · Built with curiosity and structure.</footer>
 </body>
 </html>
