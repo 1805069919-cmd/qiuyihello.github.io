@@ -1,91 +1,62 @@
-// @ts-nocheck
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FluidGlass } from '../components/fluid_glass';
+
+const metrics = [
+  ['目标岗位', 'AI 产品经理 / AI 产品助理'],
+  ['主线项目', '二手手机回收 AI 经营助手'],
+  ['能力关键词', 'RAG · Agent · Prompt · 数据分析'],
+  ['业务理解', '收 · 检 · 估 · 售 · 风控'],
+];
 
 export default function Home() {
   return (
     <motion.main
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="h-screen w-full flex flex-col items-center justify-center relative overflow-hidden px-6"
+      className="min-h-screen w-full relative overflow-hidden px-6 pt-28 pb-24"
     >
-      {/* Fluid Glass Background Effect */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
-        <FluidGlass 
-          mode="lens"
-          lensProps={{
-            scale: 0.25,
-            ior: 1.15,
-            thickness: 5,
-            chromaticAberration: 0.1,
-            anisotropy: 0.01  
-          }}
-          scale={0.25}
-          ior={1.15}
-          thickness={2}
-          transmission={1}
-          roughness={0}
-          chromaticAberration={0.05}
-          anisotropy={0.01}
-        />
-      </div>
-
-      {/* Background Data Fragment Decals */}
-      <div className="absolute top-1/4 left-10 opacity-10 pointer-events-none">
-        <pre className="text-[8px] font-mono leading-none text-secondary-container">
-          01010010 01001001 01000001{'\n'}
-          01010010 01001001 01000001{'\n'}
-          01010010 01001001 01000001
-        </pre>
-      </div>
-      <div className="absolute bottom-1/4 right-10 opacity-10 pointer-events-none">
-        <div className="w-32 h-32 border border-primary-container/30 rotate-45 flex items-center justify-center">
-          <div className="w-24 h-24 border border-secondary-container/20 -rotate-12"></div>
-        </div>
-      </div>
-
-      {/* Central Hero Section */}
-      <div className="z-10 text-center flicker">
-        <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none mb-8 font-headline text-[#87CEFA]">
-          HI HERE IS RIA
-        </h1>
-        <div className="flex flex-col items-center gap-6">
-          <Link
-            to="/contact"
-            className="group relative px-10 py-4 border border-[#87CEFA] text-[#87CEFA] font-headline uppercase tracking-[0.2rem] text-sm overflow-hidden transition-all duration-300 hover:bg-[#87CEFA]/5 neon-glow-primary active:scale-95"
-          >
-            <span className="relative z-10">Contact Me</span>
-            {/* Glitch hover state background */}
-            <div className="absolute inset-0 bg-[#87CEFA]/10 translate-x-full group-hover:translate-x-0 transition-transform duration-200 ease-out"></div>
-          </Link>
-          <div className="flex items-center gap-2 mt-4">
-            <div className="w-1.5 h-1.5 bg-[#87CEFA] rounded-full animate-pulse"></div>
-            <span className="text-[10px] uppercase font-mono tracking-widest text-outline">
-              Available for core integration // 2077
-            </span>
+      <div className="absolute inset-0 pointer-events-none opacity-30 wireframe-grid"></div>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center min-h-[calc(100vh-9rem)] relative z-10">
+        <section className="lg:col-span-7 space-y-8">
+          <div className="inline-flex items-center gap-3 border border-[#87CEFA]/30 bg-[#87CEFA]/5 px-4 py-2 font-mono text-[11px] tracking-[0.18rem] text-[#87CEFA] uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#87CEFA] animate-pulse"></span>
+            AI PRODUCT PORTFOLIO
           </div>
-        </div>
-      </div>
 
-      {/* Edge Metadata UI */}
-      <aside className="absolute bottom-20 left-10 hidden xl:block">
-        <div className="space-y-1">
-          <div className="text-[10px] text-outline font-mono">LOCATION: [REDACTED]</div>
-          <div className="text-[10px] text-outline font-mono">LAT: 35.6895</div>
-          <div className="text-[10px] text-outline font-mono">LONG: 139.6917</div>
-        </div>
-      </aside>
-      <aside className="absolute top-40 right-10 hidden xl:block text-right">
-        <div className="text-[10px] text-secondary-container/50 font-mono tracking-widest mb-2">
-          NETWORK_LOAD
-        </div>
-        <div className="w-48 h-1 bg-surface-container-highest">
-          <div className="w-2/3 h-full bg-secondary-container"></div>
-        </div>
-      </aside>
+          <div className="space-y-5">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] font-headline text-[#87CEFA]">
+              求一<br />AI 产品作品集
+            </h1>
+            <p className="max-w-2xl text-lg md:text-xl leading-relaxed text-on-surface-variant">
+              我正在从业务执行与数据标注经验，转向 AI 产品经理方向。当前主线项目是
+              <span className="text-[#87CEFA] font-bold">「二手手机回收 AI 经营助手」</span>，围绕门店验机、估价、风控、客服问答和经营看板，训练自己把业务问题拆成产品方案、AI 链路和可评测指标。
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-4">
+            <Link to="/portfolio" className="px-7 py-3 border border-[#87CEFA] text-[#87CEFA] font-bold uppercase tracking-widest text-xs hover:bg-[#87CEFA]/10 transition-all neon-glow-primary">
+              查看项目作品
+            </Link>
+            <Link to="/about" className="px-7 py-3 border border-outline-variant text-on-surface-variant font-bold uppercase tracking-widest text-xs hover:border-[#87CEFA] hover:text-[#87CEFA] transition-all">
+              了解我的能力结构
+            </Link>
+          </div>
+        </section>
+
+        <aside className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {metrics.map(([label, value], index) => (
+            <div key={label} className="border border-[#87CEFA]/20 bg-surface-container-lowest/80 p-5 min-h-32 flex flex-col justify-between hover:border-[#87CEFA]/60 transition-all">
+              <span className="font-mono text-[10px] text-[#87CEFA]/50">0{index + 1}</span>
+              <div>
+                <p className="text-[11px] uppercase tracking-widest text-outline mb-2">{label}</p>
+                <h3 className="text-lg font-bold text-on-surface leading-snug">{value}</h3>
+              </div>
+            </div>
+          ))}
+        </aside>
+      </div>
     </motion.main>
   );
 }
